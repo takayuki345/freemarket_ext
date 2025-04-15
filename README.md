@@ -1,41 +1,19 @@
-# フリマアプリ
+# フリマアプリ（追加機能実装）
 
-## Dockerビルド
-1. `git clone git@github.com:takayuki345/freemarket.git`
-2. DockerDesktopアプリを起動する
-3. `docker compose up -d --build`
+## 環境構築
+1. DockerDesktopアプリを起動しておく
 
-### Laravel環境構築
-1. `docker compose exec php bash`
-2. `composer install`
-3. .env.exampleファイルから.envをコピー作成し、以下のように環境変数の値をメンテナンスする
-``` text
-DB_CONNECTION=mysql
-DB_HOST=mysql
-DB_PORT=3306
-DB_DATABASE=laravel_db
-DB_USERNAME=laravel_user
-DB_PASSWORD=laravel_pass
-
-        （中略）
-
-MAIL_FROM_ADDRESS=test@example.com
-```
-4. アプリケーションキーの作成
+2. GitHubからクローンする
 ``` bash
-php artisan key:generate
+git clone git@github.com:takayuki345/freemarket_ext.git
 ```
-5. マイグレーションの実行
+3. プロジェクト直下に移動する
 ``` bash
-php artisan migrate
+cd freemarket_ext
 ```
-6. シーディングの実行
+4. 以下コマンドで一連の処理を行う
 ``` bash
-php artisan db:seed
-```
-7. シンボリックリンクの作成
-``` bash
-php artisan storage:link
+make init
 ```
 
 ## 使用技術（実行環境）
