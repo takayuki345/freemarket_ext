@@ -7,4 +7,5 @@ init:
 	docker compose exec php cp -r public/copy_data/item_images/ storage/app/public/
 	docker compose exec php cp -r public/copy_data/profile_images/ storage/app/public/
 	docker compose exec php php artisan config:clear
+	sleep 10
 	docker compose exec php php artisan migrate:fresh --seed
