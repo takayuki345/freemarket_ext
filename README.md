@@ -15,6 +15,10 @@ cd freemarket_ext
 ``` bash
 make init
 ```
+※ アクセス権の問題で正常動作しない場合は以下コマンドを実行
+``` bash
+sudo chmod 777 -R src
+```
 
 ## 使用技術（実行環境）
 - php 7.4.9
@@ -26,7 +30,6 @@ make init
 
 ## URL
 - 開発環境：http://localhost/
-***（アクセス権の問題で`sudo chmod 777 -R src`が必要となる場合があります）***
 - pypMyAdmin：http://localhost:8080/
 - MailHog：http://localhost:8025/
 
